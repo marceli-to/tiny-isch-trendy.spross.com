@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       end: '+=700',
       scrub: true
     },
-    scale: 0.35,
+    scale: 0.3,
     duration: 1,
     transformOrigin: 'left bottom' // Changed from 'left top' to 'left bottom'
   });
