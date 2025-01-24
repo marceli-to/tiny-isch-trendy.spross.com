@@ -41,17 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // }, "<");
 
   gsap.registerPlugin(ScrollTrigger);
+ 
   gsap.to('.hero-headline', {
     scrollTrigger: {
       trigger: '.hero-headline',
       start: 'center center',
       end: '+=700',
-      scrub: true
+      scrub: true,
     },
     scale: 0.3,
     duration: 1,
     transformOrigin: 'left bottom' // Changed from 'left top' to 'left bottom'
   });
+
   
 
 });
