@@ -1,0 +1,28 @@
+title: Settings
+fields:
+  -
+    handle: page_class
+    field:
+      options:
+        page-privacy: Impressum/Datenschutz
+      type: select
+      display: 'Seiten CSS-Klasse'
+      localizable: false
+  -
+    handle: debug
+    field:
+      type: toggle
+      display: Debug
+      localizable: false
+  -
+    handle: template
+    field:
+      type: template
+      display: Template
+      localizable: false
+  -
+    handle: layout
+    field:
+      type: template
+      display: Layout
+      localizable: false

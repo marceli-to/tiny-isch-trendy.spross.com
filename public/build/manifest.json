@@ -1,0 +1,36 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-47041a09.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/css/fonts/PPEiko-Medium.woff": {
+    "file": "assets/PPEiko-Medium-831e6f54.woff",
+    "src": "resources/css/fonts/PPEiko-Medium.woff"
+  },
+  "resources/css/fonts/PPEiko-Medium.woff2": {
+    "file": "assets/PPEiko-Medium-80202683.woff2",
+    "src": "resources/css/fonts/PPEiko-Medium.woff2"
+  },
+  "resources/css/fonts/TheSans-B4SemiLight.woff": {
+    "file": "assets/TheSans-B4SemiLight-99460f59.woff",
+    "src": "resources/css/fonts/TheSans-B4SemiLight.woff"
+  },
+  "resources/css/fonts/TheSans-B4SemiLight.woff2": {
+    "file": "assets/TheSans-B4SemiLight-337e4843.woff2",
+    "src": "resources/css/fonts/TheSans-B4SemiLight.woff2"
+  },
+  "resources/css/fonts/TheSans-B7Bold.woff": {
+    "file": "assets/TheSans-B7Bold-6dad1b0e.woff",
+    "src": "resources/css/fonts/TheSans-B7Bold.woff"
+  },
+  "resources/css/fonts/TheSans-B7Bold.woff2": {
+    "file": "assets/TheSans-B7Bold-75b930bf.woff2",
+    "src": "resources/css/fonts/TheSans-B7Bold.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-dfb0681b.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
