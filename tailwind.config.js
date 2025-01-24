@@ -33,10 +33,7 @@ export default {
       },
 
       colors: {
-        'scarlet': '#E60004',
-        'cherry': '#980103',
-        'blush': '#FFEFF0',
-        'ivory': '#FFFBEF',
+        'evergreen': '#203D00',
       },      
 
       fontSize: {
@@ -44,7 +41,7 @@ export default {
         'md': 'clamp(1.25rem, 1.75vw, 2rem)', // 20px -> 32px
         'lg': 'clamp(1.5rem, 2vw, 2.5rem)', // 24px -> 40px
         'xl': 'clamp(2.5rem, 5.25vw, 6rem)', // 40px -> 96px
-        '2xl': 'clamp(3.75rem, 9vw, 11rem)' // 64px -> 176px
+        '2xl': 'clamp(3.75rem, 16vw, 16rem)' // 64px -> 176px
       },
     
       zIndex: {

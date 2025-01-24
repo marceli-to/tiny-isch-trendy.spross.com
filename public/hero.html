@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-Driven Animation with Hero Image</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="h-screen flex flex-col items-center justify-center relative overflow-hidden">
+        <!-- Hero Image -->
+        <img id="hero-image" src="https://via.placeholder.com/1200x800" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover z-0">
+        
+        <!-- Text Container -->
+        <div id="hero" class="text-center relative z-10">
+            <div id="text-container" class="relative h-20">
+                <div id="text1" class="absolute inset-0 text-white text-4xl font-bold">Spross</div>
+                <div id="text2" class="absolute inset-0 text-white text-4xl font-bold opacity-0">Ganz schon</div>
+                <div id="text3" class="absolute inset-0 text-white text-4xl font-bold opacity-0">Tiny isch trendy</div>
+            </div>
+            <div class="mt-4 text-white text-xl">Bezug ab April 2025</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Text Animations
+            gsap.to("#text1", {
+                scrollTrigger: {
+                    trigger: "#hero",
+                    start: "top center",
+                    end: "+=500",
+                    scrub: true
+                },
+                opacity: 0,
+                y: -50
+            });
+
+            gsap.to("#text2", {
+                scrollTrigger: {
+                    trigger: "#hero",
+                    start: "top center",
+                    end: "+=500",
+                    scrub: true
+                },
+                opacity: 1,
+                y: -50,
+                delay: 0.5
+            });
+
+            gsap.to("#text2", {
+                scrollTrigger: {
+                    trigger: "#hero",
+                    start: "top center",
+                    end: "+=1000",
+                    scrub: true
+                },
+                opacity: 0,
+                y: -100,
+                delay: 1.5
+            });
+
+            gsap.to("#text3", {
+                scrollTrigger: {
+                    trigger: "#hero",
+                    start: "top center",
+                    end: "+=1000",
+                    scrub: true
+                },
+                opacity: 1,
+                y: -100,
+                delay: 2
+            });
+
+            // Hero Image Animation
+            gsap.from("#hero-image", {
+                scrollTrigger: {
+                    trigger: "#hero",
+                    start: "top top",
+                    end: "+=1000",
+                    scrub: true
+                },
+                scale: 1.2,
+                opacity: 0.8
+            });
+        });
+    </script>
+</body>
+</html>
