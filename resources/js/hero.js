@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       end: "+=50%",
       scrub: true,
       pin: true,
-      //pinSpacing: true,
-      // markers: true
+      // pinSpacing: true,
     }
   });
 
@@ -22,12 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     y: "-30vh",
     duration: 1,
     ease: "none"
-  })
+  }, "<")
 
   // Headline animation
   tl.to("[data-hero-headline]", {
-    scale: 0.2,
-    y: "-10vh",
+    scale: .4,
+    y: "0",
     duration: .75,
     ease: "none"
   }, "<")
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Badge animation
   .to("[data-hero-badge]", {
-    y: "-20vh",
+    y: "40vh",
     duration: 1,
     ease: "none"
   }, "<");

@@ -3,22 +3,23 @@
     data-hero-section>
     <div class="relative top-[20vh]" data-hero-wrapper>
       <div 
-        class="origin-top-left will-change-transform"
+        class="origin-top-left will-change-transform pt-20 relative z-40"
         data-hero-headline>
         <h1 class="font-ppeiko-medium font-medium text-2xl leading-[0.9]">
           <span class="font-thesans-light">Tiny isch</span><br>trendy
         </h1>
       </div>
       <div 
-        class="w-full aspect-square md:aspect-[16/10] mt-90" 
+        class="w-full aspect-square md:aspect-[16/10] mt-45 md:mt-90 relative z-30" 
         data-hero-image>
         <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-full object-cover aspect-square md:aspect-[16/10]">
+        <div 
+          class="will-change-transform absolute top-0 -translate-y-1/2 right-20 xl:right-40" 
+          data-hero-badge>
+          {{ partial:icons/badge class="w-full max-w-150 md:max-w-[200px] xl:max-w-[275px] h-auto" }}
+        </div>
       </div>
-      <div 
-        class="will-change-transform absolute top-1/4 -translate-y-1/2 right-20 xl:right-40" 
-        data-hero-badge>
-        {{ partial:icons/badge class="w-full max-w-[200px] xl:max-w-[275px] h-auto" }}
-      </div>
+
     </div>
     <!-- Headline -->
     {{# <div 
@@ -57,7 +58,7 @@
 
 
   <!-- Content -->
-  <main class="pt-100">
+  <main class="pt-50">
     <p>1. Content after the hero...</p>
     <p>Content after the hero...</p>
     <p>Content after the hero...</p>
