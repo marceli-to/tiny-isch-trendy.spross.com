@@ -1,9 +1,27 @@
-  {{# <div 
-    class="min-h-screen relative"
+  <div 
+    class="min-h-screen relative overflow-hidden"
     data-hero-section>
-
+    <div class="relative top-[20vh]" data-hero-wrapper>
+      <div 
+        class="origin-top-left will-change-transform"
+        data-hero-headline>
+        <h1 class="font-ppeiko-medium font-medium text-2xl leading-[0.9]">
+          <span class="font-thesans-light">Tiny isch</span><br>trendy
+        </h1>
+      </div>
+      <div 
+        class="w-full aspect-square md:aspect-[16/10] mt-90" 
+        data-hero-image>
+        <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-full object-cover aspect-square md:aspect-[16/10]">
+      </div>
+      <div 
+        class="will-change-transform absolute top-1/4 -translate-y-1/2 right-20 xl:right-40" 
+        data-hero-badge>
+        {{ partial:icons/badge class="w-full max-w-[200px] xl:max-w-[275px] h-auto" }}
+      </div>
+    </div>
     <!-- Headline -->
-    <div 
+    {{# <div 
       class="absolute z-50 top-1/4 left-0 origin-top-left will-change-transform"
       data-hero-headline>
       <h1 class="font-ppeiko-medium font-medium text-2xl leading-[0.9] text-center">
@@ -16,17 +34,11 @@
       class="absolute top-3/4 w-full aspect-[16/10]" 
       data-hero-image>
       <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-full object-cover aspect-[16/10]">
-    </div>
+    </div> #}}
 
-    <!-- Badge -->
-    <div 
-      class="will-change-transform absolute top-3/4 -translate-y-1/2 right-20 xl:right-40" 
-      data-hero-badge>
-      {{ partial:icons/badge class="w-full max-w-[200px] xl:max-w-[275px] h-auto" }}
-    </div>
-  </div> #}}
+  </div>
 
-  <div 
+  {{# <div 
     class="min-h-screen relative flex flex-col">
 
     <!-- Headline -->
@@ -41,11 +53,11 @@
       <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-full object-cover aspect-[16/10]">
     </div>
 
-  </div>
+  </div> #}}
 
 
   <!-- Content -->
-  <main class="">
+  <main class="pt-100">
     <p>1. Content after the hero...</p>
     <p>Content after the hero...</p>
     <p>Content after the hero...</p>
