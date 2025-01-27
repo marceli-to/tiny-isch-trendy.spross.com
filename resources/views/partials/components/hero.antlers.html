@@ -1,41 +1,23 @@
-{{# <div data-hero-section class="overflow-x-hidden">
+<div data-hero-section class="overflow-x-hidden">
   <div 
-    class="grid gap-y-60 md:gap-y-80 mt-[40vh] lg:mt-[25vh]" 
+    class="grid gap-y-60 md:gap-y-80 mt-[40vh] lg:mt-[15vh]" 
     data-hero-wrapper>
-
     <div 
       class="origin-bottom-left will-change-transform relative z-40"
       data-hero-headline>
-
       <h1 class="font-ppeiko-medium font-medium text-hero leading-[0.9]">
         <span class="font-thesans-light">Tiny&nbsp;isch</span><br>trendy
       </h1>
-
     </div>
-
-    <div data-hero-image class="relative">
-      <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-auto aspect-[23/15] object-cover">
+    <div 
+      data-hero-image 
+      class="relative -top-30">
+      <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-auto aspect-[23/15] object-cover"> 
       <div 
         class="absolute right-30 md:right-40 top-0 xl:top-40 -translate-y-1/2 lg:-translate-y-full z-50 will-change-transform"
         data-hero-badge>
         {{ partial:icons/badge class="w-full max-w-75 md:max-w-[150px] xl:max-w-[275px] h-auto" }}
       </div>
-
     </div>
-
   </div>
-</div> #}}
-
-{{ partial:components/swiper/wrapper 
-  selector="data-gallery"
-  hasNavigation="true" }}
-  
-  {{ partial:components/swiper/slide }}
-    <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-auto aspect-[23/15] object-cover">
-  {{ /partial:components/swiper/slide }}
-
-  {{ partial:components/swiper/slide }}
-    <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-auto aspect-[23/15] object-cover">
-  {{ /partial:components/swiper/slide }}
-
-{{ /partial:components/swiper/wrapper }}
+</div>

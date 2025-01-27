@@ -49,7 +49,7 @@ export default {
         'lg': 'clamp(1.5rem, 2vw, 2.5rem)', // 24px -> 40px
         'xl': 'clamp(2.5rem, 5.25vw, 6rem)', // 40px -> 96px
 
-        'hero': 'clamp(6rem, 25vw, 25rem)', // 96px -> 400px
+        'hero': 'clamp(6rem, 22vw, 25rem)', // 96px -> 400px
       },
     
       zIndex: {

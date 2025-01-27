@@ -18,19 +18,19 @@ gsap.registerPlugin(ScrollTrigger);
     } 
     else if (width <= 768) { // Tablet
       return {
-        headlineScale: .25,
+        headlineScale: .2,
         badgeY: 80,
       };
     } 
     else if (width < 1024) { // Small Desktop
       return {
-        headlineScale: .25,
+        headlineScale: .2,
         badgeY: 120,
       };
     } 
     else { // Large Desktop
       return {
-        headlineScale: .25,
+        headlineScale: .28,
         badgeY: 160,
       };
     }
@@ -50,7 +50,7 @@ gsap.registerPlugin(ScrollTrigger);
     })
     .to(headline, {
       scale: values.headlineScale,
-      y: 20,
+      y: -20,
       ease: "none",
     })
     .to(image, {

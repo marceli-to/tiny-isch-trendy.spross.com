@@ -1,3 +1,4 @@
+
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -8,16 +9,20 @@ const swiper = new Swiper('[data-gallery]', {
   modules: [Navigation, Pagination, Autoplay],
   direction: 'horizontal',
   loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
+  on: {
+    init: function () {
+    }
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-btn-next',
-    prevEl: '.swiper-btn-prev',
-  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  // },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  // },
+  // navigation: {
+  //   nextEl: '.swiper-btn-next',
+  //   prevEl: '.swiper-btn-prev',
+  // },
 });
