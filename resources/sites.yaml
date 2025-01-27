@@ -1,4 +1,4 @@
-de:
-  name: Deutsch
+saatlenstrasse:
+  name: Saatlenstrasse
   locale: de
   url: '{{ config:app:url }}'
