@@ -1,0 +1,12 @@
+<div x-data="{ selected: null}">
+  {{ accordeon_items }}
+    {{ partial:components/accordeon/wrapper :index="index" }}
+      {{ partial:components/accordeon/button :title="title" :index="index" }}
+      {{ partial:components/accordeon/section :index="index" }}
+        {{ partial:components/accordeon/item }}
+          {{ content }}
+        {{ /partial:components/accordeon/item }}
+      {{ /partial:components/accordeon/section }}
+    {{ /partial:components/accordeon/wrapper }}
+  {{ /accordeon_items }}
+</div>

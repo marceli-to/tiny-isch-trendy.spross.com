@@ -1,0 +1,7 @@
+<div class="relative overflow-hidden max-h-0 transition-all ease-in-out duration-500"
+  x-ref="container{{ index }}" 
+  x-bind:style="selected == {{ index }} ? 'max-height: ' + $refs.container{{ index }}.scrollHeight + 'px;' : ''">
+  <div class="py-10">
+    {{ slot }}
+  </div>
+</div>

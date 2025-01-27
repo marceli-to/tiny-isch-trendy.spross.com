@@ -34,6 +34,13 @@ tabs:
                       fields:
                         -
                           import: editor
+                    accordeon:
+                      display: Akkordion
+                      instructions: 'Akkordion hinzufügen'
+                      icon: form-drop-down-menu
+                      fields:
+                        -
+                          import: accordeon
   seo:
     display: SEO
     sections:
