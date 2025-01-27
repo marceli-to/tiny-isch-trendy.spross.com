@@ -1,30 +1,70 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener('DOMContentLoaded', () => {
-
-  gsap.registerPlugin(ScrollTrigger);
+(function() {
 
   const headline = document.querySelector('[data-hero-headline]');
   const image = document.querySelector('[data-hero-image]');
+  const badge = document.querySelector('[data-hero-badge]');
 
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: headline,
-      start: "top center", // Start when headline top hits bottom of viewport
-      end: "center top",  // End when headline bottom hits top of viewport
-      scrub: true,
-      invalidateOnRefresh: true,
-      //markers: true, // Uncomment to see trigger points
+
+  const getAnimationValues = () => {
+    const width = window.innerWidth;
+    if (width < 640) { // Mobile
+      return {
+        headlineScale: .4,
+        badgeY: 80,
+      };
+    } 
+    else if (width <= 768) { // Tablet
+      return {
+        headlineScale: .25,
+        badgeY: 80,
+      };
+    } 
+    else if (width < 1024) { // Small Desktop
+      return {
+        headlineScale: .25,
+        badgeY: 120,
+      };
+    } 
+    else { // Large Desktop
+      return {
+        headlineScale: .25,
+        badgeY: 160,
+      };
     }
-  })
-  .to(headline, {
-    scale: 0.25,
-    y: 20,
-    ease: "none",
-  })
-  .to(image, {
-    y: -20,
-    ease: "none",
-  }, 0);
-});
+  };
+
+  const run = () => {
+
+    const values = getAnimationValues();
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: headline,
+        start: "top center", // Start when headline top hits center of viewport
+        end: "center top",  // End when headline center hits top of viewport
+        scrub: true,
+        invalidateOnRefresh: true,
+      }
+    })
+    .to(headline, {
+      scale: values.headlineScale,
+      y: 20,
+      ease: "none",
+    })
+    .to(image, {
+      y: -20,
+      ease: "none",
+    }, 0)
+    .to(badge, {
+      y: values.badgeY,
+      ease: "none",
+    }, 0);
+  };
+
+  document.addEventListener('DOMContentLoaded', run);
+
+})();
+
