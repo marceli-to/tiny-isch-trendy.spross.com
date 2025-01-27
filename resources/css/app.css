@@ -37,8 +37,3 @@ main h1 {
 main h2 {
 }
 
-/* Sticky headline styles */
-[data-hero-headline].is-sticky {
-  @apply fixed top-20 left-20 z-50;
-  transition: all 0.3s ease;
-}

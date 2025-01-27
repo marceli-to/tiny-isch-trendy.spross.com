@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
   const image = document.querySelector('[data-hero-image]');
   const badge = document.querySelector('[data-hero-badge]');
 
-
   const getAnimationValues = () => {
     const width = window.innerWidth;
     if (width < 640) { // Mobile

@@ -4,3 +4,4 @@ Alpine.start();
 
 import './bootstrap';
 import './hero';
+import './swiper';
