@@ -5,60 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Create main timeline for hero animation
-  const tl = gsap.timeline({
+  const headline = document.querySelector('[data-hero-headline]');
+  const image = document.querySelector('[data-hero-image]');
+
+  gsap.timeline({
     scrollTrigger: {
-      trigger: "[data-hero-section]",
-      start: "top top",
-      end: "+=50%",
+      trigger: headline,
+      start: "top center", // Start when headline top hits bottom of viewport
+      end: "center top",  // End when headline bottom hits top of viewport
       scrub: true,
-      pin: true,
-      // pinSpacing: true,
+      invalidateOnRefresh: true,
+      //markers: true, // Uncomment to see trigger points
     }
-  });
-
-  tl.to("[data-hero-wrapper]", {
-    y: "-30vh",
-    duration: 1,
-    ease: "none"
-  }, "<")
-
-  // Headline animation
-  tl.to("[data-hero-headline]", {
-    scale: .4,
-    y: "0",
-    duration: .75,
-    ease: "none"
-  }, "<")
-
-  // Image animation
-  .to("[data-hero-image]", {
-    y: "-40vh",
-    duration: 1,
-    ease: "none"
-  }, "<")
-
-  // Badge animation
-  .to("[data-hero-badge]", {
-    y: "40vh",
-    duration: 1,
-    ease: "none"
-  }, "<");
-
-  // gsap.registerPlugin(ScrollTrigger);
- 
-  // gsap.to('.hero-headline', {
-  //   scrollTrigger: {
-  //     trigger: '.hero-headline',
-  //     start: 'center center',
-  //     end: '+=700',
-  //     scrub: true,
-  //   },
-  //   scale: 0.3,
-  //   duration: 1,
-  //   transformOrigin: 'left bottom' // Changed from 'left top' to 'left bottom'
-  // });
-
-  
-
+  })
+  .to(headline, {
+    scale: 0.25,
+    y: 20,
+    ease: "none",
+  })
+  .to(image, {
+    y: -20,
+    ease: "none",
+  }, 0);
 });

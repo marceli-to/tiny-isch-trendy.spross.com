@@ -1,64 +1,36 @@
-  <div 
-    class="min-h-screen relative overflow-hidden"
-    data-hero-section>
-    <div class="relative top-[20vh]" data-hero-wrapper>
-      <div 
-        class="origin-top-left will-change-transform pt-20 relative z-40"
-        data-hero-headline>
-        <h1 class="font-ppeiko-medium font-medium text-2xl leading-[0.9]">
-          <span class="font-thesans-light">Tiny isch</span><br>trendy
-        </h1>
-      </div>
-      <div 
-        class="w-full aspect-square md:aspect-[16/10] mt-45 md:mt-90 relative z-30" 
-        data-hero-image>
-        <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-full object-cover aspect-square md:aspect-[16/10]">
-        <div 
-          class="will-change-transform absolute top-0 -translate-y-1/2 right-20 xl:right-40" 
-          data-hero-badge>
-          {{ partial:icons/badge class="w-full max-w-150 md:max-w-[200px] xl:max-w-[275px] h-auto" }}
-        </div>
-      </div>
+   <div data-hero-section class="overflow-x-hidden">
 
-    </div>
-    <!-- Headline -->
-    {{# <div 
-      class="absolute z-50 top-1/4 left-0 origin-top-left will-change-transform"
-      data-hero-headline>
-      <h1 class="font-ppeiko-medium font-medium text-2xl leading-[0.9] text-center">
-        <span class="font-thesans-light">Tiny isch</span><br>trendy
-      </h1>
-    </div>
-
-    <!-- Image -->
     <div 
-      class="absolute top-3/4 w-full aspect-[16/10]" 
-      data-hero-image>
-      <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-full object-cover aspect-[16/10]">
-    </div> #}}
+      class="grid gap-y-60 md:gap-y-80 mt-[40vh] md:mt-[25vh]" 
+      data-hero-wrapper>
 
-  </div>
+      <div 
+        class="origin-bottom-left will-change-transform relative z-40"
+        data-hero-headline>
 
-  {{# <div 
-    class="min-h-screen relative flex flex-col">
+        <h1 class="font-ppeiko-medium font-medium text-2xl leading-[0.9]">
+          <span class="font-thesans-light">Tiny&nbsp;isch</span><br>trendy
+        </h1>
 
-    <!-- Headline -->
-    <div class="mt-[25vh] hero-headline">
-      <h1 class="font-ppeiko-medium font-medium text-2xl leading-[0.9]">
-        <span class="font-thesans-light">Tiny isch</span><br>trendy
-      </h1>
+      </div>
+
+      <div data-hero-image class="relative">
+
+        <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-auto aspect-[16/10] object-cover">
+
+        <div data-hero-badge class="absolute right-30 md:right-70 top-0 -translate-y-1/2 z-50">
+          {{ partial:icons/badge class="w-full max-w-75 md:max-w-[200px] xl:max-w-[275px] h-auto" }}
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- Image -->
-    <div class="mt-100 hero-image">
-      <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-full object-cover aspect-[16/10]">
-    </div>
-
-  </div> #}}
+</div>
 
 
   <!-- Content -->
-  <main class="pt-50">
+  <main>
     <p>1. Content after the hero...</p>
     <p>Content after the hero...</p>
     <p>Content after the hero...</p>

@@ -1,93 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de" class="scroll-smooth overflow-y-auto">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll-Driven Animation with Hero Image</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Tiny isch trendy • Spross</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body {
+            padding: 20px;
+            margin: 0;
+        }
+        header {
+          position: sticky;
+          top: 20px;
+          z-index: 500;
+        }
+        .logo {
+            background-color: goldenrod;
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            aspect-ratio: 16/8;
+            max-width: 200px;
+            font-size: 36px;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            width: 100%;
+        }
+        .image div {
+            background-color: #eee;
+            display: block;
+            aspect-ratio: 16/10;
+            width: 100%;
+            height: auto;
+        }
+        .wrapper {
+            position: sticky;
+            top: 0;
+            margin-top: 40vh;
+            display: grid;
+            gap: 2rem;
+        }
+        .headline {
+            font-size: 9rem;
+            line-height: 1;
+            transform-origin: left bottom;
+        }
+        h1 {
+          margin: 0;
+        }
+        .main {
+            margin-top: 0px;
+            position: relative;
+            z-index: 1;
+            background: white;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <div class="h-screen flex flex-col items-center justify-center relative overflow-hidden">
-        <!-- Hero Image -->
-        <img id="hero-image" src="https://via.placeholder.com/1200x800" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover z-0">
-        
-        <!-- Text Container -->
-        <div id="hero" class="text-center relative z-10">
-            <div id="text-container" class="relative h-20">
-                <div id="text1" class="absolute inset-0 text-white text-4xl font-bold">Spross</div>
-                <div id="text2" class="absolute inset-0 text-white text-4xl font-bold opacity-0">Ganz schon</div>
-                <div id="text3" class="absolute inset-0 text-white text-4xl font-bold opacity-0">Tiny isch trendy</div>
+<body>
+    <header>
+        <div class="logo">Spross</div>
+    </header>
+    <div class="section" data-hero-section>
+        <div class="wrapper" data-hero-wrapper>
+            <div class="headline" data-hero-headline>
+                <h1><span>Tiny isch</span><br>trendy</h1>
             </div>
-            <div class="mt-4 text-white text-xl">Bezug ab April 2025</div>
+            <div class="image" data-hero-image>
+                <span></span>
+                <div class="badge" data-hero-badge></div>
+            </div>
         </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <main class="main">
+        <p>1. Content after the hero...</p>
+        <p>Content after the hero...</p>
+        <p>Content after the hero...</p>
+        <p>Content after the hero...</p>
+        <p>Content after the hero...</p>
+        <p>Content after the hero...</p>
+        <p>Content after the hero...</p>
+    </main>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            gsap.registerPlugin(ScrollTrigger);
-
-            // Text Animations
-            gsap.to("#text1", {
-                scrollTrigger: {
-                    trigger: "#hero",
-                    start: "top center",
-                    end: "+=500",
-                    scrub: true
-                },
-                opacity: 0,
-                y: -50
-            });
-
-            gsap.to("#text2", {
-                scrollTrigger: {
-                    trigger: "#hero",
-                    start: "top center",
-                    end: "+=500",
-                    scrub: true
-                },
-                opacity: 1,
-                y: -50,
-                delay: 0.5
-            });
-
-            gsap.to("#text2", {
-                scrollTrigger: {
-                    trigger: "#hero",
-                    start: "top center",
-                    end: "+=1000",
-                    scrub: true
-                },
-                opacity: 0,
-                y: -100,
-                delay: 1.5
-            });
-
-            gsap.to("#text3", {
-                scrollTrigger: {
-                    trigger: "#hero",
-                    start: "top center",
-                    end: "+=1000",
-                    scrub: true
-                },
-                opacity: 1,
-                y: -100,
-                delay: 2
-            });
-
-            // Hero Image Animation
-            gsap.from("#hero-image", {
-                scrollTrigger: {
-                    trigger: "#hero",
-                    start: "top top",
-                    end: "+=1000",
-                    scrub: true
-                },
-                scale: 1.2,
-                opacity: 0.8
-            });
-        });
+        gsap.registerPlugin(ScrollTrigger);
+        const headline = document.querySelector('[data-hero-headline]');
+        const image = document.querySelector('[data-hero-image]');
+        const main = document.querySelector('.main');
+        const wrapper = document.querySelector('[data-hero-wrapper]');
+        const section = document.querySelector('[data-hero-section]');
+        
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: headline,
+                start: "top center", // Start when headline top hits bottom of viewport
+                end: "bottom top",  // End when headline bottom hits top of viewport
+                scrub: true,
+                invalidateOnRefresh: true,
+                //markers: true, // Uncomment to see trigger points
+            }
+        })
+        .to(headline, {
+            scale: 0.3,
+            y: 20,
+            ease: "none",
+        })
+        .to(image, {
+            y: 20,
+            ease: "none",
+        }, 0);
     </script>
 </body>
 </html>
