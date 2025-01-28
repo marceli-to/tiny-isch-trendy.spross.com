@@ -1,0 +1,7 @@
+{{ if state == 'available' }}
+  <span class="rounded-full w-10 h-10 shrink-0 bg-green-500">&nbsp;</span>
+{{ elseif state == 'reserved' }}
+  <span class="rounded-full w-10 h-10 shrink-0 bg-yellow-500">&nbsp;</span>
+{{ else }}  
+  <span class="rounded-full w-10 h-10 shrink-0 bg-red-500">&nbsp;</span>
+{{ /if }}

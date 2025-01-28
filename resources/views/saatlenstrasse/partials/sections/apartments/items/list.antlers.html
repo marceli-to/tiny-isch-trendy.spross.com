@@ -10,16 +10,27 @@
 <div class="md:col-span-1">
   <span>CHF {{ rent_gross }}.–</span>
 </div>
-<div class="md:col-span-1">
-  {{ state:label }}
+<div class="md:col-span-1 flex">
+  <div class="flex items-center gap-x-4 lg:gap-x-8">
+    {{ partial:icons/state }}
+    {{ state:label }}
+  </div>
 </div>
 <div class="md:col-span-1">
-  <a href="" title="Download Grundriss">
-    Plan
+  <a
+    href="" 
+    title="Download Grundriss" 
+    class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
+    <span>Plan</span>
+    {{ partial:icons/pdf }}
   </a>
 </div>
 <div class="md:col-span-2">
-  <a href="" title="Dowload Anmeldeformular">
-    Formular
+  <a 
+    href="" 
+    title="Dowload Anmeldeformular"
+    class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
+    <span>Formular</span>
+    {{ partial:icons/pdf }}
   </a>
 </div>

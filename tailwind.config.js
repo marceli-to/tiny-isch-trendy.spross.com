@@ -51,7 +51,7 @@ export default {
         'lg': 'clamp(1.313rem, 2.69vw, 4rem)',
         'xl': 'clamp(1.313rem, 3.69vw, 5rem)',
         '2xl': 'clamp(2.25rem, 6.75vw, 9rem)',
-        'hero': 'clamp(6rem, 22vw, 25rem)',
+        '3xl': 'clamp(6rem, 22vw, 25rem)',
       },
     
       zIndex: {

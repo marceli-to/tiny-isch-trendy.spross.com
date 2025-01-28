@@ -32,7 +32,7 @@ main h1 {
 }
 
 main h2 {
-  @apply font-ppeiko-medium text-xl leading-[1.25];
+  @apply font-ppeiko-medium text-xl leading-[1.25] mb-5;
 }
 
 main h3 {}
@@ -48,6 +48,10 @@ main em {
 
 main sup {
   @apply text-xs
+}
+
+main a {
+  @apply hover:text-willow underline underline-offset-4 lg:underline-offset-8 decoration-1 lg:decoration-2 transition-colors;
 }
 
 /* Utilities */

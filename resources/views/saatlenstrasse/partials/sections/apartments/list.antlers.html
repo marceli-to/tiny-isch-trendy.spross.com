@@ -1,16 +1,61 @@
 
-<section class="text-sm md:hidden">
-  {{ collection:apartments as="apartments_a" building:is="saatlenstrasse_building_a" }}
-    {{ if apartments_a }}
-      {{ apartments_a }}
-        {{ partial:sections/apartments/items/card }}
-      {{ /apartments_a }}
-    {{ /if }}
-  {{ /collection:apartments }}
+<section 
+  class="text-sm w-full md:hidden mt-md mb-lg"
+  x-data="{ active_mini: 'building_a' }">
+
+  <div class="flex justify-between items-end gap-x-10 w-full px-20">
+    <button 
+      @click="active_mini = 'building_a'" 
+      class="font-ppeiko-medium w-full h-50 text-lg leading-none text-cedar flex justify-center items-end rounded-t-lg bg-cedar/15 pb-10" 
+      :class="{ 'text-xl bg-cedar/20 !h-70 !pb-20': active_mini === 'building_a' }">
+      Haus A
+    </button>
+    <button 
+      @click="active_mini = 'building_b'" 
+      class="font-ppeiko-medium w-full h-50 text-lg leading-none text-thyme flex justify-center items-end rounded-t-lg bg-thyme/15 pb-10" 
+      :class="{ 'text-xl bg-thyme/20 !h-70 !pb-20': active_mini === 'building_b' }">
+      Haus B
+    </button>
+  </div>
+
+  <div 
+    class="bg-cedar/20 w-full min-h-200"
+    x-show="active_mini === 'building_a'">
+    {{ collection:apartments as="apartments_a" building:is="saatlenstrasse_building_a" }}
+      {{ if apartments_a }}
+        <div class="flex text-mahogany font-thesans-bold font-bold mx-20 pt-40 mb-10">
+          {{ partial:sections/apartments/items/card_header }}
+        </div>
+        {{ apartments_a }}
+          <div class="flex text-mahogany border-t border-mahogany/50 mx-20">
+          {{ partial:sections/apartments/items/card building="a" }}
+          </div>
+        {{ /apartments_a }}
+      {{ /if }}
+    {{ /collection:apartments }}
+  </div>
+
+  <div 
+    class="bg-thyme/20 w-full min-h-200"
+    x-show="active_mini === 'building_b'">
+    {{ collection:apartments as="apartments_b" building:is="saatlenstrasse_building_a" }}
+      {{ if apartments_b }}
+        <div class="flex text-moss font-thesans-bold font-bold mx-20 pt-40 mb-10">
+          {{ partial:sections/apartments/items/card_header }}
+        </div>
+        {{ apartments_b }}
+          <div class="flex text-moss border-t border-moss/50 mx-20">
+          {{ partial:sections/apartments/items/card building="b" }}
+          </div>
+        {{ /apartments_b }}
+      {{ /if }}
+    {{ /collection:apartments }}
+  </div>
+
 </section>
 
-<div 
-  class="text-sm hidden md:col-span-full md:grid md:grid-cols-subgrid" 
+<section 
+  class="text-sm hidden md:col-span-full md:grid md:grid-cols-subgrid mt-md mb-lg" 
   x-data="{ active: 'building_a' }">
   <div class="md:col-span-full md:grid md:grid-cols-subgrid">
     <button 
@@ -37,7 +82,7 @@
       {{ if apartments }}
         {{ apartments }}
           <div class="md:col-span-full md:grid md:grid-cols-subgrid text-mahogany border-t border-mahogany/50 [&>div]:min-h-40 md:[&>div]:min-h-60 2xl:[&>div]:min-h-80 [&>div]:flex [&>div]:flex-col [&>div]:justify-center">
-            {{ partial:sections/apartments/items/list }}
+            {{ partial:sections/apartments/items/list building="a" }}
           </div>
         {{ /apartments }}
       {{ /if }}
@@ -54,10 +99,10 @@
       {{ if apartments }}
         {{ apartments }}
           <div class="md:col-span-full md:grid md:grid-cols-subgrid text-moss border-t border-moss/50 [&>div]:min-h-40 md:[&>div]:min-h-60 2xl:[&>div]:min-h-80 [&>div]:flex [&>div]:flex-col [&>div]:justify-center">
-            {{ partial:sections/apartments/items/list }}
+            {{ partial:sections/apartments/items/list building="b"  }}
           </div>
         {{ /apartments }}
       {{ /if }}
     {{ /collection:apartments }}
   </section>
-</div>
+</section>
