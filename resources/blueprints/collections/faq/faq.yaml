@@ -1,0 +1,42 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: false
+              validate:
+                - required
+              display: Frage
+          -
+            handle: reply
+            field:
+              buttons:
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - removeformat
+                - anchor
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              type: bard
+              display: Antwort
+              localizable: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+title: FAQ

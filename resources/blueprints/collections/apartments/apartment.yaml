@@ -1,0 +1,99 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: false
+              validate:
+                - required
+              display: Nummer
+          -
+            handle: floor
+            field:
+              options:
+                -
+                  key: ug
+                  value: Untergeschoss
+                -
+                  key: eg
+                  value: Erdgeschoss
+                -
+                  key: 1og
+                  value: '1. Obergeschoss'
+                -
+                  key: 2og
+                  value: '2. Obergeschoss'
+              default: eg
+              type: select
+              display: Etage
+              localizable: false
+          -
+            handle: living_space
+            field:
+              type: text
+              display: Fläche
+              localizable: false
+          -
+            handle: rent_gross
+            field:
+              type: text
+              display: Bruttomiete
+              localizable: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: building
+            field:
+              options:
+                -
+                  key: saatlenstrasse_building_a
+                  value: 'Haus A (Saatlenstrasse)'
+                -
+                  key: saatlenstrasse_building_b
+                  value: 'Haus B (Saatlenstrasse)'
+              type: select
+              display: Haus
+              localizable: false
+          -
+            handle: state
+            field:
+              options:
+                -
+                  key: available
+                  value: frei
+                -
+                  key: reserved
+                  value: reserviert
+                -
+                  key: rented
+                  value: vermietet
+              default: available
+              type: select
+              display: Status
+              localizable: false
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              show_regenerate: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - apartments
+              max_items: 1
+              listable: false
+              localizable: true
+title: Apartment

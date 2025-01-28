@@ -19,7 +19,6 @@ main {
 
 main p:not(:last-child),
 main ul:not(:last-child) {
-  @apply mb-4;
 }
 
 main ul {
@@ -28,12 +27,26 @@ main ul {
 main li {
 }
 
-main strong {
-}
-
 main h1 {
+  @apply font-ppeiko-medium text-center max-w-5xl mx-auto;
 }
 
 main h2 {
+  @apply font-ppeiko-medium;
+}
+
+main h3 {}
+
+main b,
+main strong {
+  @apply font-thesans-bold;
+}
+
+main em {
+  @apply font-ppeiko-medium not-italic;
+}
+
+main sup {
+  @apply text-xs -top-12
 }
 

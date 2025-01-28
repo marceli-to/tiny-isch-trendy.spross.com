@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'TheSansBold';
-  src: url('fonts/TheSans-B7Bold.woff2') format('woff2'), url('fonts/TheSans-B7Bold.woff') format('woff');
+  src: url('fonts/TheSans-W05-Bold.woff2') format('woff2'), url('fonts/TheSans-W05-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -21,8 +21,18 @@
 
 @font-face {
   font-family: 'TheSansSemiLight';
-  src: url('fonts/TheSans-B4SemiLight.woff2') format('woff2'), url('fonts/TheSans-B4SemiLight.woff') format('woff');
+  src: url('fonts/TheSans-W05-SemiLight.woff2') format('woff2'), url('fonts/TheSans-W05-SemiLight.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'TheSansLight';
+  src: url('fonts/TheSans-W05-Light.woff2') format('woff2'), url('fonts/TheSans-W05-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+

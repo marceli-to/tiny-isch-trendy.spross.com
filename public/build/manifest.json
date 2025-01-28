@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-3611195f.css",
+    "file": "assets/app-d862ce1c.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -12,21 +12,29 @@
     "file": "assets/PPEiko-Medium-80202683.woff2",
     "src": "resources/css/fonts/PPEiko-Medium.woff2"
   },
-  "resources/css/fonts/TheSans-B4SemiLight.woff": {
-    "file": "assets/TheSans-B4SemiLight-99460f59.woff",
-    "src": "resources/css/fonts/TheSans-B4SemiLight.woff"
+  "resources/css/fonts/TheSans-W05-Bold.woff": {
+    "file": "assets/TheSans-W05-Bold-ec1c4f9a.woff",
+    "src": "resources/css/fonts/TheSans-W05-Bold.woff"
   },
-  "resources/css/fonts/TheSans-B4SemiLight.woff2": {
-    "file": "assets/TheSans-B4SemiLight-337e4843.woff2",
-    "src": "resources/css/fonts/TheSans-B4SemiLight.woff2"
+  "resources/css/fonts/TheSans-W05-Bold.woff2": {
+    "file": "assets/TheSans-W05-Bold-b544cc20.woff2",
+    "src": "resources/css/fonts/TheSans-W05-Bold.woff2"
   },
-  "resources/css/fonts/TheSans-B7Bold.woff": {
-    "file": "assets/TheSans-B7Bold-6dad1b0e.woff",
-    "src": "resources/css/fonts/TheSans-B7Bold.woff"
+  "resources/css/fonts/TheSans-W05-Light.woff": {
+    "file": "assets/TheSans-W05-Light-a44844cb.woff",
+    "src": "resources/css/fonts/TheSans-W05-Light.woff"
   },
-  "resources/css/fonts/TheSans-B7Bold.woff2": {
-    "file": "assets/TheSans-B7Bold-75b930bf.woff2",
-    "src": "resources/css/fonts/TheSans-B7Bold.woff2"
+  "resources/css/fonts/TheSans-W05-Light.woff2": {
+    "file": "assets/TheSans-W05-Light-a1a22a60.woff2",
+    "src": "resources/css/fonts/TheSans-W05-Light.woff2"
+  },
+  "resources/css/fonts/TheSans-W05-SemiLight.woff": {
+    "file": "assets/TheSans-W05-SemiLight-da16ce2b.woff",
+    "src": "resources/css/fonts/TheSans-W05-SemiLight.woff"
+  },
+  "resources/css/fonts/TheSans-W05-SemiLight.woff2": {
+    "file": "assets/TheSans-W05-SemiLight-3c2f46ba.woff2",
+    "src": "resources/css/fonts/TheSans-W05-SemiLight.woff2"
   },
   "resources/js/app.css": {
     "file": "assets/app-d66ac298.css",
@@ -36,7 +44,7 @@
     "css": [
       "assets/app-d66ac298.css"
     ],
-    "file": "assets/app-b3ebf7c3.js",
+    "file": "assets/app-b41f9b67.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

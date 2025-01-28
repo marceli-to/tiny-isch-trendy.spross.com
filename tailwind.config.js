@@ -28,8 +28,9 @@ export default {
 
       fontFamily: {
         'ppeiko-medium': ['PPEiko-Medium', ...defaultTheme.fontFamily.sans],
-        'thesans-bold': ['TheSans-B7Bold', ...defaultTheme.fontFamily.sans],
-        'thesans-light': ['TheSansSemiLight', ...defaultTheme.fontFamily.sans],
+        'thesans-bold': ['TheSans-W05-Bold', ...defaultTheme.fontFamily.sans],
+        'thesans-semi-light': ['TheSansSemiLight', ...defaultTheme.fontFamily.sans],
+        'thesans-light': ['TheSansLight', ...defaultTheme.fontFamily.sans],
       },
 
       colors: {
@@ -44,6 +45,7 @@ export default {
       },      
 
       fontSize: {
+        'xs': 'clamp(0.8rem, 1.2vw, 1rem)', // 16px -> 24px
         'sm': 'clamp(1.125rem, 1.25vw, 1.5rem)', // 18px -> 24px
         'md': 'clamp(1.25rem, 1.75vw, 2rem)', // 20px -> 32px
         'lg': 'clamp(1.5rem, 2vw, 2.5rem)', // 24px -> 40px

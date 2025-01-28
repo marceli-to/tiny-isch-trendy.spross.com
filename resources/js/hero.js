@@ -10,27 +10,39 @@ gsap.registerPlugin(ScrollTrigger);
 
   const getAnimationValues = () => {
     const width = window.innerWidth;
-    if (width < 640) { // Mobile
+    if (width < 640) { // below sm
       return {
-        headlineScale: .4,
+        headlineScale: .35,
         badgeY: 80,
       };
     } 
-    else if (width <= 768) { // Tablet
+    else if (width <= 768) { // below md
       return {
         headlineScale: .2,
         badgeY: 80,
       };
     } 
-    else if (width < 1024) { // Small Desktop
+    else if (width < 1024) { // below lg
       return {
         headlineScale: .2,
         badgeY: 120,
       };
     } 
-    else { // Large Desktop
+    else if (width < 1280) { // below xl
       return {
         headlineScale: .28,
+        badgeY: 160,
+      };
+    }
+    else if (width < 1536) { // below 2xl
+      return {
+        headlineScale: .26,
+        badgeY: 160,
+      };
+    }
+    else { // after 2xl
+      return {
+        headlineScale: .24,
         badgeY: 160,
       };
     }

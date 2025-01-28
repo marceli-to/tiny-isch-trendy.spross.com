@@ -1,0 +1,43 @@
+
+<section class="md:hidden">
+  {{ collection:apartments as="apartments_a" building:is="saatlenstrasse_building_a" }}
+    {{ if apartments_a }}
+      {{ apartments_a }}
+        {{ partial:sections/apartments/items/card }}
+      {{ /apartments_a }}
+    {{ /if }}
+  {{ /collection:apartments }}
+</section>
+
+<div 
+  class="hidden md:col-span-full md:grid md:grid-cols-subgrid" 
+  x-data="{ active: 'building_a' }">
+  <div>
+    <button @click="active = 'building_a'" :class="{ 'active': active === 'building_a' }">Haus A</button>
+    <button @click="active = 'building_b'" :class="{ 'active': active === 'building_b' }">Haus B</button>
+  </div>
+
+  <section 
+    class="md:col-span-full md:grid md:grid-cols-subgrid"
+    x-show="active === 'building_a'">
+    {{ collection:apartments as="apartments" building:is="saatlenstrasse_building_a" }}
+      {{ if apartments }}
+        {{ apartments }}
+          {{ partial:sections/apartments/items/list }}
+        {{ /apartments }}
+      {{ /if }}
+    {{ /collection:apartments }}
+  </section>
+
+  <section 
+    class="md:col-span-full md:grid md:grid-cols-subgrid"
+    x-show="active === 'building_b'">
+    {{ collection:apartments as="apartments" building:is="saatlenstrasse_building_b" }}
+      {{ if apartments }}
+        {{ apartments }}
+          {{ partial:sections/apartments/items/list }}
+        {{ /apartments }}
+      {{ /if }}
+    {{ /collection:apartments }}
+  </section>
+</div>
