@@ -28,7 +28,7 @@ main li {
 }
 
 main h1 {
-  @apply font-ppeiko-medium text-2xl leading-[1.05] max-w-6xl mx-auto text-balance;
+  @apply font-ppeiko-medium text-2xl leading-[1.05];
 }
 
 main h2 {
@@ -50,3 +50,55 @@ main sup {
   @apply text-xs
 }
 
+/* Utilities */
+.mt-sm {
+  margin-top: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
+}
+
+.mt-md {
+  margin-top: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
+}
+
+.mt-lg {
+  margin-top: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
+}
+
+.mt-xl {
+  margin-top: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
+}
+
+.my-sm {
+  margin-top: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
+  margin-bottom: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
+}
+
+.my-md {
+  margin-top: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
+  margin-bottom: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
+}
+
+.my-lg {
+  margin-top: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
+  margin-bottom: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
+}
+
+.my-xl {
+  margin-top: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
+  margin-bottom: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
+}
+
+.mb-sm {
+  margin-bottom: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
+}
+
+.mb-md {
+  margin-bottom: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
+}
+
+.mb-lg {
+  margin-bottom: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
+}
+
+.mb-xl {
+  margin-bottom: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
+}
