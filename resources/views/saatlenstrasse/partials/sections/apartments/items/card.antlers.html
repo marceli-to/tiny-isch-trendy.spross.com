@@ -21,9 +21,11 @@
     href=""
     class="w-[7%] min-h-50 flex items-center justify-center ont-thesans-semi-light text-[1.5rem] !no-underline {{ building == 'a' ? '!text-mahogany' : '!text-evergreen' }}"
     @click.prevent="open = !open">
+
     <template x-if="open">
       <span>–</span>
     </template>
+
     <template x-if="!open">
       <span>+</span>
     </template>
@@ -31,11 +33,14 @@
 
   <div 
     class="w-full"
+    x-cloak
     x-show="open">
+
     <div class="text-[1rem] mt-5 mb-20">
       <strong>Geschoss:</strong> 3. Stock<br>
       <strong>Bruttomiete:</strong> CHF 1800.–
     </div>
+    
     <div class="text-[1.32rem] flex justify-between mb-20">
       <a
         href="" 
