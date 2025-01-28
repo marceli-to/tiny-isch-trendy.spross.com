@@ -1,2 +1,15 @@
 <h2 class="mb-sm">FAQ's</h2>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis tenetur dolor ad itaque quidem ipsam voluptatem iste! Natus praesentium perspiciatis velit odit maiores quae obcaecati id sapiente autem, nostrum voluptates?</p>
+<div 
+  class="text-sm leading-[1.2]"
+  x-data="{ selected: null}">
+  {{ collection:faq }}
+    {{ partial:components/accordeon/wrapper :index="index" }}
+      {{ partial:components/accordeon/button :title="title" :index="index" }}
+      {{ partial:components/accordeon/section :index="index" }}
+        {{ partial:components/accordeon/item }}
+          {{ reply }}
+        {{ /partial:components/accordeon/item }}
+      {{ /partial:components/accordeon/section }}
+    {{ /partial:components/accordeon/wrapper }}
+  {{ /collection:faq }}
+</div>

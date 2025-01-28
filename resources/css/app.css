@@ -55,8 +55,12 @@ main a {
 }
 
 /* Utilities */
-.mt-sm {
+.mt-xs {
   margin-top: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
+}
+
+.mt-sm {
+  margin-top: clamp(1.25rem, 1.5vw, 3.125rem); /* 20px > 50px */
 }
 
 .mt-md {
@@ -67,11 +71,31 @@ main a {
   margin-top: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
 }
 
+.mb-xs {
+  margin-bottom: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
+}
+
+.mb-sm {
+  margin-bottom: clamp(1.25rem, 1.5vw, 3.125rem); /* 20px > 50px */
+}
+
+.mb-md {
+  margin-bottom: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
+}
+
+.mb-lg {
+  margin-bottom: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
+}
+
+.mb-xl {
+  margin-bottom: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
+}
+
 .mt-xl {
   margin-top: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
 }
 
-.my-sm {
+.my-xs {
   margin-top: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
   margin-bottom: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
 }
@@ -88,21 +112,5 @@ main a {
 
 .my-xl {
   margin-top: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
-  margin-bottom: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
-}
-
-.mb-sm {
-  margin-bottom: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
-}
-
-.mb-md {
-  margin-bottom: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
-}
-
-.mb-lg {
-  margin-bottom: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
-}
-
-.mb-xl {
   margin-bottom: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
 }

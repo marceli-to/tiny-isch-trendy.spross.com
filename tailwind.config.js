@@ -46,7 +46,7 @@ export default {
 
       fontSize: {
         'xs': 'clamp(0.65rem, 1vw, .8rem)',
-        'sm': 'clamp(0.938rem, 0.88vw, 1.813rem)',
+        'sm': 'clamp(0.938rem, 1.15vw, 1.813rem)',
         'md': 'clamp(1.063rem, 1.31vw, 2.375rem)',
         'lg': 'clamp(1.313rem, 2.69vw, 4rem)',
         'xl': 'clamp(1.313rem, 3.69vw, 5rem)',
