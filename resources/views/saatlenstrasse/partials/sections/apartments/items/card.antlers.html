@@ -19,10 +19,16 @@
 
   <a 
     href=""
-    class="w-[7%] min-h-50 flex items-center justify-center ont-thesans-semi-light text-[1.5rem] !no-underline {{ building == 'a' ? '!text-mahogany' : '!text-thyme' }}"
+    class="w-[7%] min-h-50 flex items-center justify-center ont-thesans-semi-light text-[1.5rem] !no-underline {{ building == 'a' ? '!text-mahogany' : '!text-evergreen' }}"
     @click.prevent="open = !open">
-    +
+    <template x-if="open">
+      <span>–</span>
+    </template>
+    <template x-if="!open">
+      <span>+</span>
+    </template>
   </a>
+
   <div 
     class="w-full"
     x-show="open">
@@ -47,4 +53,5 @@
       </a>
     </div>
   </div>
+
 </div>
