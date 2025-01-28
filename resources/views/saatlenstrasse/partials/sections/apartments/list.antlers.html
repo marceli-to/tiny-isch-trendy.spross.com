@@ -13,12 +13,18 @@
   class="text-sm hidden md:col-span-full md:grid md:grid-cols-subgrid" 
   x-data="{ active: 'building_a' }">
   <div class="md:col-span-full md:grid md:grid-cols-subgrid">
-    <div class="md:col-span-2 md:col-start-2 flex justify-center items-end rounded-t-lg py-10 2xl:py-15 bg-cedar/15" :class="{ 'bg-cedar/20': active === 'building_a' }">
-      <button @click="active = 'building_a'" class="font-ppeiko-medium text-lg text-cedar" :class="{ 'text-xl': active === 'building_a' }">Haus A</button>
-    </div>
-    <div class="md:col-span-2 flex justify-center items-end rounded-t-lg bg-thyme/15 py-10 2xl:py-15" :class="{ 'bg-thyme/20': active === 'building_a' }">
-      <button @click="active = 'building_b'" class="font-ppeiko-medium text-lg text-thyme" :class="{ 'text-xl': active === 'building_b' }">Haus B</button>
-    </div>
+    <button 
+      @click="active = 'building_a'" 
+      class="font-ppeiko-medium text-lg text-cedar md:col-span-2 md:col-start-2 flex justify-center items-end rounded-t-lg py-10 2xl:py-15 bg-cedar/15" 
+      :class="{ 'text-xl bg-cedar/20': active === 'building_a' }">
+      Haus A
+    </button>
+    <button 
+      @click="active = 'building_b'" 
+      class="font-ppeiko-medium text-lg text-thyme md:col-span-2 flex justify-center items-end rounded-t-lg bg-thyme/15 py-10 2xl:py-15" 
+      :class="{ 'text-xl bg-thyme/20': active === 'building_b' }">
+      Haus B
+    </button>
   </div>
 
   <section 
