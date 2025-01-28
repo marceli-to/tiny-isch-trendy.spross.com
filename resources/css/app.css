@@ -28,11 +28,11 @@ main li {
 }
 
 main h1 {
-  @apply font-ppeiko-medium text-center max-w-5xl mx-auto;
+  @apply font-ppeiko-medium text-2xl leading-[1.05] max-w-6xl mx-auto text-balance;
 }
 
 main h2 {
-  @apply font-ppeiko-medium;
+  @apply font-ppeiko-medium text-xl leading-[1.25];
 }
 
 main h3 {}
@@ -47,6 +47,6 @@ main em {
 }
 
 main sup {
-  @apply text-xs -top-12
+  @apply text-xs
 }
 

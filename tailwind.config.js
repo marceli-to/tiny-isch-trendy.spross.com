@@ -28,7 +28,7 @@ export default {
 
       fontFamily: {
         'ppeiko-medium': ['PPEiko-Medium', ...defaultTheme.fontFamily.sans],
-        'thesans-bold': ['TheSans-W05-Bold', ...defaultTheme.fontFamily.sans],
+        'thesans-bold': ['TheSansBold', ...defaultTheme.fontFamily.sans],
         'thesans-semi-light': ['TheSansSemiLight', ...defaultTheme.fontFamily.sans],
         'thesans-light': ['TheSansLight', ...defaultTheme.fontFamily.sans],
       },
@@ -45,13 +45,13 @@ export default {
       },      
 
       fontSize: {
-        'xs': 'clamp(0.8rem, 1.2vw, 1rem)', // 16px -> 24px
-        'sm': 'clamp(1.125rem, 1.25vw, 1.5rem)', // 18px -> 24px
-        'md': 'clamp(1.25rem, 1.75vw, 2rem)', // 20px -> 32px
-        'lg': 'clamp(1.5rem, 2vw, 2.5rem)', // 24px -> 40px
-        'xl': 'clamp(2.5rem, 5.25vw, 6rem)', // 40px -> 96px
-
-        'hero': 'clamp(6rem, 22vw, 25rem)', // 96px -> 400px
+        'xs': 'clamp(0.65rem, 1vw, .8rem)',
+        'sm': 'clamp(0.938rem, 0.88vw, 1.813rem)',
+        'md': 'clamp(1.063rem, 1.31vw, 2.375rem)',
+        'lg': 'clamp(1.313rem, 2.69vw, 4rem)',
+        'xl': 'clamp(1.313rem, 3.69vw, 5rem)',
+        '2xl': 'clamp(2.25rem, 6.75vw, 9rem)',
+        'hero': 'clamp(6rem, 22vw, 25rem)',
       },
     
       zIndex: {
