@@ -51,6 +51,20 @@ tabs:
               type: text
               display: Bruttomiete
               localizable: false
+          -
+            handle: type
+            field:
+              options:
+                -
+                  key: studio
+                  value: Studio
+                -
+                  key: attika
+                  value: Attika
+              default: studio
+              type: select
+              display: Typ
+              localizable: false
   sidebar:
     display: Sidebar
     sections:

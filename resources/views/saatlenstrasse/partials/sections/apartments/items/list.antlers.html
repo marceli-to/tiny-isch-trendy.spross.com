@@ -1,5 +1,5 @@
 <div class="md:col-span-1">
-  Studio {{ title }}
+  {{ type:label }} {{ title }}
 </div>
 
 <div class="md:col-span-1">
@@ -23,7 +23,8 @@
 
 <div class="md:col-span-1">
   <a
-    href="" 
+    href="/assets/downloads/spross-saatlenstrasse-haus-{{ building }}-{{ type }}-{{ title }}.pdf" 
+    target="_blank"
     title="Download Grundriss" 
     class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
     <span>Plan</span>
@@ -33,8 +34,9 @@
 
 <div class="md:col-span-2">
   <a 
-    href="" 
+    href="/assets/downloads/spross-saatlenstrasse-haus-{{ building }}-{{ type }}-{{ title | lowercase }}-anmeldung.pdf" 
     title="Dowload Anmeldeformular"
+    target="_blank"
     class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
     <span>Anmeldeformular</span>
     {{ partial:icons/pdf }}
