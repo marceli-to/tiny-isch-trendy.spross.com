@@ -1,19 +1,19 @@
 <picture>
-  {{ if (sizes | in_array('2xl')) }}
-    <source media="(min-width: 1280px)" srcset="{{ glide:image preset="{{ preset ? '2xl-{{ preset }}-webp' : '2xl-webp' }}" }}" type="image/webp">
-    <source media="(min-width: 1280px)" srcset="{{ glide:image preset="{{ preset ? '2xl-{{ preset }}' : '2xl' }}" }}" type="image/jpeg">
-  {{ /if }}
   {{ if (sizes | in_array('xl')) }}
-    <source media="(min-width: 1024px)" srcset="{{ glide:image preset="{{ preset ? 'xl-{{ preset }}-webp' : 'xl-webp' }}" }}" type="image/webp">
-    <source media="(min-width: 1024px)" srcset="{{ glide:image preset="{{ preset ? 'xl-{{ preset }}' : 'xl' }}" }}" type="image/jpeg">
+    <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-xl.avif" type="image/avif">
+    <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-xl.{{ extension }}" type="image/jpeg">
   {{ /if }}
   {{ if (sizes | in_array('lg')) }}
-    <source media="(min-width: 768px)" srcset="{{ glide:image preset="{{ preset ? 'lg-{{ preset }}-webp' : 'lg-webp' }}" }}" type="image/webp">
-    <source media="(min-width: 768px)" srcset="{{ glide:image preset="{{ preset ? 'lg-{{ preset }}' : 'lg' }}" }}" type="image/jpeg">
+    <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-lg.avif" type="image/avif">
+    <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-lg.{{ extension }}" type="image/jpeg">
   {{ /if }}
-  {{# <source srcset="{{ glide:image preset="{{ preset ? 'md-{{ preset }}-webp' : 'md-webp' }}" }}" /> #}}
+  {{ if (sizes | in_array('md')) }}
+    <source media="(min-width: 768px)" srcset="/assets/{{ image }}-md.avif" type="image/avif">
+    <source media="(min-width: 768px)" srcset="/assets/{{ image }}-md.{{ extension }}" type="image/jpeg">
+  {{ /if }}
+  <source srcset="" type="image/avif" />
   <img 
-    src="/assets/{{ image }}" 
+    src="/assets/{{ image }}-sm.{{ extension }}" 
     alt="{{ alt  }}" 
     title="{{ alt }}" 
     height="{{ height }}" 

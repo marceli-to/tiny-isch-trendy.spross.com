@@ -13,7 +13,13 @@
       data-hero-image 
       class="relative">
       <figure class="pr-20 xs:pr-0">
-        <img src="/assets/spross-tiny-apartments-salon-b.jpg" alt="Interior" class="w-full h-auto aspect-[23/15] object-cover">
+        {{ partial:media/picture 
+          image="spross-tiny-apartments-salon-b" 
+          extension="jpg" 
+          :sizes="['lg', 'md', 'sm']"
+          width="2000" 
+          height="1600"
+          class="w-full h-auto aspect-[23/15] object-cover" }}
         <figcaption class="hidden sm:block text-xs text-right text-evergreen/50 mt-10 2xl:mt-15">
           Dekoration, Bettwäsche, Kleidung und Aufbewahrungsboxen dienen der Visualisierung und gehören nicht zur Wohnungsausstattung.
         </figcaption>

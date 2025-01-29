@@ -6,7 +6,12 @@
   <div class="my-md flex flex-wrap md:col-span-full md:grid md:grid-cols-subgrid text-md">
     <div class="ml-60 mt-md md:mt-0 md:ml-0 md:col-span-3 md:self-center order-2 md:order-1">
       <a href="/assets/spross-tiny-apartments-kueche.jpg" data-fancybox="gallery">
-        {{ partial:media/picture image="spross-tiny-apartments-kueche.jpg" width="1280" height="853" }}
+        {{ partial:media/picture 
+          image="spross-tiny-apartments-kueche" 
+          extension="jpg" 
+          :sizes="['lg', 'md', 'sm']"
+          width="2000" 
+          height="2229" }}
       </a>
       <div class="mt-xs">
         Keramikböden und raumhohe Fenster sorgen für eine helle und luftige Atmosphäre. Wer gerne selbst kocht, wird die kompakte, hochwertige Forster-Stahlküche lieben.
@@ -17,8 +22,13 @@
         <div class="mb-md">
           Zu den vielen Tiny-Apartment-Extras gehören auch insgesamt acht separat mietbare Parkplätze, Veloabstellplätze mit Veloputzstation, zwei grosse Paketboxen beim Eingang für Ihre Bestellungen sowie Glasfaseranschlüsse für superschnelles Surfen und Arbeiten.
         </div>
-        <a href="/assets/spross-tiny-apartments-wohnen.jpg" data-fancybox="gallery">
-          {{ partial:media/picture image="spross-tiny-apartments-wohnen.jpg" width="1280" height="853" }}
+        <a href="/assets/spross-tiny-apartments-salon-a.jpg" data-fancybox="gallery">
+          {{ partial:media/picture 
+            image="spross-tiny-apartments-salon-a" 
+            extension="jpg" 
+            :sizes="['lg', 'md', 'sm']"
+            width="2000" 
+            height="1600" }}
         </a>
         <div class="mt-xs">
           Highlights sind der gemütliche Lounge-Bereich und die Schreinerarbeiten in Eiche. Lamellen-Raumtrenner sorgen für ein wohnliches Ambiente, Einbauschränke und Bettschublade bieten genügend Stauraum.
@@ -26,7 +36,12 @@
       </div>
       <div class="mr-60 md:mr-0 md:col-span-3 md:col-start-3 mt-md">
         <a href="/assets/spross-tiny-apartments-bad.jpg" data-fancybox="gallery">
-          {{ partial:media/picture image="spross-tiny-apartments-bad.jpg" width="1280" height="853" }}
+          {{ partial:media/picture 
+            image="spross-tiny-apartments-bad" 
+            extension="jpg" 
+            :sizes="['lg', 'md', 'sm']"
+            width="2000" 
+            height="2000" }}
         </a>
         <div class="mt-xs">
           Das separate, mit Keramikplatten ausgestattete Bad bietet neben Dusche und WC auch eine eigene Waschmaschine mit Tumbler.
