@@ -1,62 +1,61 @@
 <div 
-  class="flex flex-wrap w-full justify-between"
-  x-data="{ open: false }">
-  
-  <div class="w-[31%] min-h-50 flex items-center">
-    {{ title }}
-  </div>
-  
-  <div class="w-[31%] min-h-50 flex items-center">
-    <span>{{ living_space }} m<sup>2</sup></span>
-  </div>
-
-  <div class="w-[31%] min-h-50 flex items-center">
-    <div class="flex items-center gap-x-6">
-      {{ partial:icons/state }}
-      {{ state:label }}
-    </div>
-  </div>
-
-  <a 
-    href=""
-    class="w-[7%] min-h-50 flex items-center justify-end ont-thesans-semi-light text-[1.5rem] !no-underline {{ building == 'a' ? '!text-mahogany' : '!text-evergreen' }}"
-    @click.prevent="open = !open">
-
-    <template x-if="open">
-      <span>–</span>
-    </template>
-
-    <template x-if="!open">
-      <span>+</span>
-    </template>
-  </a>
-
+  x-data="{ selected: null }" 
+  class="w-full">
   <div 
-    class="w-full"
-    x-cloak
-    x-show="open">
-
-    <div class="text-[1rem] mt-5 mb-20">
-      <strong>Geschoss:</strong> 3. Stock<br>
-      <strong>Bruttomiete:</strong> CHF 1800.–
+    @click="selected !== {{ index }} ? selected = {{ index }} : selected = null;"
+    class="flex flex-wrap w-full justify-between cursor-pointer">
+    
+    <div class="w-[31%] min-h-50 flex items-center">
+      {{ title }}
     </div>
     
-    <div class="text-[1.32rem] flex justify-between mb-20">
-      <a
-        href="" 
-        title="Download Grundriss" 
-        class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
-        <span>Plan</span>
-        {{ partial:icons/pdf }}
-      </a>
-      <a
-        href="" 
-        title="Download Anmeldeformular" 
-        class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors  {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
-        <span>Anmeldeformular</span>
-        {{ partial:icons/pdf }}
-      </a>
+    <div class="w-[31%] min-h-50 flex items-center">
+      <span>{{ living_space }} m<sup>2</sup></span>
     </div>
-  </div>
 
+    <div class="w-[31%] min-h-50 flex items-center">
+      <div class="flex items-center gap-x-6">
+        {{ partial:icons/state }}
+        {{ state:label }}
+      </div>
+    </div>
+
+    <span class="w-[7%] cursor-pointer min-h-50 flex items-center justify-end ont-thesans-semi-light text-[1.5rem] !no-underline {{ building == 'a' ? '!text-mahogany' : '!text-evergreen' }}">
+      <template x-if="selected !== {{ index }}">
+        <div>+</div>
+      </template>
+      <template x-if="selected === {{ index }}">
+        <div>–</div> 
+      </template>
+    </span>
+
+    <div 
+      class="w-full max-h-0 transition-all duration-300 overflow-hidden"
+      x-ref="container{{ index }}" 
+      x-bind:style="selected == {{ index }} ? 'max-height: ' + $refs.container{{ index }}.scrollHeight + 'px;' : ''">
+
+      <div class="text-[1rem] mt-5 mb-20">
+        <strong>Geschoss:</strong> 3. Stock<br>
+        <strong>Bruttomiete:</strong> CHF 1800.–
+      </div>
+      
+      <div class="text-[1.32rem] flex justify-between mb-20">
+        <a
+          href="" 
+          title="Download Grundriss" 
+          class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
+          <span>Plan</span>
+          {{ partial:icons/pdf }}
+        </a>
+        <a
+          href="" 
+          title="Download Anmeldeformular" 
+          class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors  {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
+          <span>Anmeldeformular</span>
+          {{ partial:icons/pdf }}
+        </a>
+      </div>
+    </div>
+
+  </div>
 </div>
