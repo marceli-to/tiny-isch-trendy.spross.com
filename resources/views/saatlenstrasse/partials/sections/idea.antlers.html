@@ -3,7 +3,21 @@
   <h2>Wie klein darfs denn sein?</h2>
   <p>32 Studios, zwei Häuser eine Philosophie: Klein, aber fein. Mit den neuen Tiny Apartments an der <a href="" target="_blank">Saatlenstrasse</a> in Zürich Schwamendingen bietet Spross die perfekte Lösung für Singles oder alle, die einfach gerne allein wohnen.</p>
   <div class="my-md">
-    [Slideshow]
+    {{ partial:components/swiper/wrapper 
+        selector="data-gallery"
+        hasNavigation="true"
+        class="mx-auto max-w-3xl" }}
+      {{ partial:components/swiper/slide }}
+        <a href="/assets/spross-tiny-apartments-aussen.jpg" data-fancybox="gallery">
+          {{ partial:media/picture image="spross-tiny-apartments-aussen.jpg" width="1280" height="853" }}
+        </a>
+      {{ /partial:components/swiper/slide }}
+      {{ partial:components/swiper/slide }}
+        <a href="/assets/spross-tiny-apartments-aussen.jpg" data-fancybox="gallery">
+          {{ partial:media/picture image="spross-tiny-apartments-aussen2.jpg" width="1280" height="853" }}
+        </a>
+      {{ /partial:components/swiper/slide }}
+    {{ /partial:components/swiper/wrapper }}
   </div>
   <p>Ob als spontane Übergangslösung oder Paradies für Minimalist:innen, ob als Zürcher Oase für Expats und Weltenbummler:innen, ob für Junge oder Alte, ob kurz oder lang oder einfach so: <em>Diese coolen, kompakten Studios mit separatem Bad</em> bieten auf kleinstem Raum alles, was eine Person so braucht – und nicht mehr. Hochwertig, hell, modern und gut gelegen.</p>
 {{ /partial:layout/section }}

@@ -9,20 +9,16 @@ const swiper = new Swiper('[data-gallery]', {
   modules: [Navigation, Pagination, Autoplay],
   direction: 'horizontal',
   loop: true,
-  on: {
-    init: function () {
-    }
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
   },
-  // autoplay: {
-  //   delay: 4000,
-  //   disableOnInteraction: false,
-  // },
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   clickable: true,
-  // },
-  // navigation: {
-  //   nextEl: '.swiper-btn-next',
-  //   prevEl: '.swiper-btn-prev',
-  // },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev',
+  },
 });

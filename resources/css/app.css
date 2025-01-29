@@ -1,4 +1,5 @@
 @import "typo/webfonts.css";
+@import "vendor/fancybox.css";
 
 @tailwind base;
 @tailwind components;

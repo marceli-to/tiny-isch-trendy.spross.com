@@ -1,12 +1,11 @@
-<div class="swiper relative w-full {{ class }}" {{ selector }}>
-  <div class="swiper-wrapper">
-    {{ slot }}
+<div class="relative {{ class }}">
+  <div class="swiper relative w-full {{ class }}" {{ selector }}>
+    <div class="swiper-wrapper">
+      {{ slot }}
+    </div>
   </div>
-  {{# {{ if hasNavigation }}
+  {{ if hasNavigation }}
     {{ partial:components/swiper/buttons/prev class="{{ prevClass }}" }}
     {{ partial:components/swiper/buttons/next class="{{ nextClass }}" }}
   {{ /if }}
-  {{ if hasPagination }}
-    {{ partial:components/swiper/pagination }}
-  {{ /if }} #}}
 </div>

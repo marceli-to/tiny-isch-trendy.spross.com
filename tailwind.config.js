@@ -16,6 +16,12 @@ export default {
 
     extend: {
 
+      backgroundImage: {
+        'lightbox-prev': "url(img/chevron-left.svg)",
+        'lightbox-next': "url(img/chevron-right.svg)",
+        'lightbox-close': "url(img/cross.svg)",
+      },
+
       screens: {
         'xs': '480px',
         '3xl': '125rem',

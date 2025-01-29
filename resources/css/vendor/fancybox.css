@@ -1,0 +1,38 @@
+.fancybox__backdrop {
+  @apply !bg-thyme/95;
+}
+
+
+.fancybox__nav .f-button svg,
+.fancybox__toolbar .f-button svg {
+  @apply !hidden
+}
+
+.fancybox__toolbar .f-button[data-fancybox-close] {
+  @apply !bg-transparent !bg-no-repeat bg-center bg-lightbox-close bg-[length:32px_auto] size-32 right-20 top-20 lg:right-40 lg:top-40;
+}
+
+.fancybox__nav {
+  @apply !rounded-none;
+}
+
+.fancybox__nav .f-button {
+  @apply !bg-transparent !bg-no-repeat bg-center bg-[length:20px_auto] lg:w-20 !rounded-none z-[99998];
+  z-index: 99998;
+}
+
+.fancybox__nav .f-button.is-next {
+  @apply bg-lightbox-next right-20 lg:!right-40
+}
+
+.fancybox__nav .f-button.is-prev {
+  @apply bg-lightbox-prev left-20 lg:!left-40
+}
+
+.fancybox__caption {
+  @apply !text-black !p-0
+}
+
+.fancybox__footer {
+  background-color: transparent !important;
+}

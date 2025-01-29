@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-61836c59.css",
+    "file": "assets/app-03e877f0.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -36,15 +36,27 @@
     "file": "assets/TheSans-W05-SemiLight-3c2f46ba.woff2",
     "src": "resources/css/fonts/TheSans-W05-SemiLight.woff2"
   },
+  "resources/img/chevron-left.svg": {
+    "file": "assets/chevron-left-ecc3c747.svg",
+    "src": "resources/img/chevron-left.svg"
+  },
+  "resources/img/chevron-right.svg": {
+    "file": "assets/chevron-right-3bc7e8b2.svg",
+    "src": "resources/img/chevron-right.svg"
+  },
+  "resources/img/cross.svg": {
+    "file": "assets/cross-e080b7d2.svg",
+    "src": "resources/img/cross.svg"
+  },
   "resources/js/app.css": {
-    "file": "assets/app-d66ac298.css",
+    "file": "assets/app-784f8f85.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-d66ac298.css"
+      "assets/app-784f8f85.css"
     ],
-    "file": "assets/app-b41f9b67.js",
+    "file": "assets/app-b4e90221.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
