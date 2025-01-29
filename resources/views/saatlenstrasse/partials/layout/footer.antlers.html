@@ -1,3 +1,45 @@
-<footer>
+<footer class="mt-lg mb-sm">
+  <div class="max-w-xl mx-auto font-thesans-semi-light text-[1rem] sm:text-[1.125rem]">
+    <div class="flex justify-center gap-x-10 lg:gap-x-20 max-w-xs mx-auto">
+      <a href="https://www.spross.com" target="_blank" class="transition-colors whitespace-nowrap px-12 lg:px-16 pb-6 pt-4 leading-none rounded-full bg-fern text-white flex items-center max-w-[8.75rem] group">
+        spross.com
+        {{ partial:icons/arrow class="w-12 lg:w-14 h-auto mt-2 ml-4 group-hover:translate-x-3 transition-transform text-white" }}
+      </a>
+      <a href="https://www.facebook.com/Spross.Gruppe" target="_blank" rel="noopener noreferrer" title="Spross auf Facebook" class="inline-block size-32 group">
+        {{ partial:icons/facebook class="text-fern w-full h-auto mt-2" }}
+      </a>
+      <a href="https://www.linkedin.com/company/spross/" target="_blank" rel="noopener noreferrer" title="Spross auf Linkedin" class="inline-block size-32 group">
+        {{ partial:icons/linkedin class="text-fern w-full h-auto mt-2" }}
+      </a>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-x-4 lg:gap-x-8 mt-20 lg:mt-30">
+      <div class="flex gap-x-4 lg:gap-x-8">
+        <span>© Spross-Gruppe, {{ now | format('Y') }}</span>
+        <span class="hidden sm:block">—</span>
+      </div>
+      <div class="flex gap-x-8 lg:gap-x-12">
+        <a 
+          href="https://www.spross.com/meta/datenschutz"
+          title="Datenschutz"
+          class="block transition-colors hover:underline decoration-1 underline-offset-4">
+          Datenschutz
+        </a>
+        <a 
+          href="https://www.spross.com/meta/datenschutz"
+          title="Disclaimer"
+          class="block transition-colors hover:underline decoration-1 underline-offset-4">
+          Disclaimer
+        </a>
+        <a 
+          href="https://www.spross.com/meta/datenschutz"
+          title="Impressum"
+          class="block transition-colors hover:underline decoration-1 underline-offset-4">
+          Impressum
+        </a>
+      </div>
+    </div>
+
+  </div>
 </footer>
 {{ vite src="resources/js/app.js" }}

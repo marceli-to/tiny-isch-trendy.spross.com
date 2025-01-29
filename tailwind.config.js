@@ -18,7 +18,7 @@ export default {
 
       screens: {
         'xs': '480px',
-        'huge': '2000px',
+        '3xl': '125rem',
       },
 
       maxWidth: {
@@ -45,13 +45,22 @@ export default {
       },      
 
       fontSize: {
-        'xs': 'clamp(0.65rem, 1vw, .8rem)',
-        'sm': 'clamp(0.938rem, 1.15vw, 1.813rem)',
-        'md': 'clamp(1.063rem, 1.31vw, 2.375rem)',
-        'lg': 'clamp(1.313rem, 2.69vw, 4rem)',
-        'xl': 'clamp(1.313rem, 3.69vw, 5rem)',
-        '2xl': 'clamp(2.25rem, 6.75vw, 9rem)',
-        '3xl': 'clamp(6rem, 22vw, 25rem)',
+        'tiny': 'clamp(0.65rem, 1vw, .8rem)', // sup
+        'xs': 'clamp(1rem, 1vw, 1.25rem)', // faq, hero caption
+        'sm': 'clamp(0.938rem, 1.15vw, 1.813rem)', // apartment list
+        'md': 'clamp(1.063rem, 1.31vw, 2.375rem)', // body (sm)
+        'lg': 'clamp(1.313rem, 2.69vw, 4rem)', // body (lg), 
+        'xl': 'clamp(1.313rem, 3.69vw, 5rem)', // heading 2, apartment buttons
+        '2xl': 'clamp(2.25rem, 6.75vw, 9rem)', // heading 1
+        '3xl': 'clamp(6rem, 22vw, 25rem)', // hero
+      },
+
+      margin: {
+        'xs': 'clamp(0.625rem, 1.25vw, 1.875rem)', /* 10px > 30px */
+        'sm': 'clamp(1.25rem, 1.5vw, 3.125rem)', /* 20px > 50px */
+        'md': 'clamp(1.25rem, 6.25vw, 7.5rem)', /* 20px > 120px */
+        'lg': 'clamp(2.5rem, 12.5vw, 15rem)', /* 40px > 250px */
+        'xl': 'clamp(3.75rem, 15vw, 18.75rem)',  /* 60px > 300px */
       },
     
       zIndex: {

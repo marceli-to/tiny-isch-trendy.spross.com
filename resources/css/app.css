@@ -19,6 +19,7 @@ main {
 
 main p:not(:last-child),
 main ul:not(:last-child) {
+  @apply mb-sm;
 }
 
 main ul {
@@ -47,70 +48,9 @@ main em {
 }
 
 main sup {
-  @apply text-xs
+  @apply text-tiny
 }
 
 main a {
   @apply hover:text-willow underline underline-offset-4 lg:underline-offset-8 decoration-1 lg:decoration-2 transition-colors;
-}
-
-/* Utilities */
-.mt-xs {
-  margin-top: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
-}
-
-.mt-sm {
-  margin-top: clamp(1.25rem, 1.5vw, 3.125rem); /* 20px > 50px */
-}
-
-.mt-md {
-  margin-top: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
-}
-
-.mt-lg {
-  margin-top: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
-}
-
-.mb-xs {
-  margin-bottom: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
-}
-
-.mb-sm {
-  margin-bottom: clamp(1.25rem, 1.5vw, 3.125rem); /* 20px > 50px */
-}
-
-.mb-md {
-  margin-bottom: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
-}
-
-.mb-lg {
-  margin-bottom: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
-}
-
-.mb-xl {
-  margin-bottom: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
-}
-
-.mt-xl {
-  margin-top: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
-}
-
-.my-xs {
-  margin-top: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
-  margin-bottom: clamp(0.625rem, 1.25vw, 1.875rem); /* 10px > 30px */
-}
-
-.my-md {
-  margin-top: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
-  margin-bottom: clamp(1.25rem, 6.25vw, 7.5rem); /* 20px > 120px */
-}
-
-.my-lg {
-  margin-top: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
-  margin-bottom: clamp(2.5rem, 12.5vw, 15rem); /* 40px > 250px */
-}
-
-.my-xl {
-  margin-top: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
-  margin-bottom: clamp(3.75rem, 15vw, 18.75rem); /* 60px > 300px */
 }
