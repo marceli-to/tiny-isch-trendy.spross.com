@@ -19,16 +19,22 @@ tabs:
               options:
                 -
                   key: ug
-                  value: Untergeschoss
+                  value: UG
                 -
                   key: eg
-                  value: Erdgeschoss
+                  value: EG
                 -
                   key: 1og
-                  value: '1. Obergeschoss'
+                  value: '1. OG'
                 -
                   key: 2og
-                  value: '2. Obergeschoss'
+                  value: '2. OG'
+                -
+                  key: 3og
+                  value: '3. OG'
+                -
+                  key: attika
+                  value: Attika
               default: eg
               type: select
               display: Etage
@@ -63,6 +69,7 @@ tabs:
               type: select
               display: Haus
               localizable: false
+              default: saatlenstrasse_building_b
           -
             handle: state
             field:
