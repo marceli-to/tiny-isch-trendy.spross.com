@@ -12,30 +12,35 @@ gsap.registerPlugin(ScrollTrigger);
     const width = window.innerWidth;
     if (width < 640) { // below sm
       return {
-        headlineScale: .42,
-        badgeY: 60,
+        start: "top 70%",
+        headlineScale: .4,
+        badgeY: 30,
       };
     } 
     else if (width <= 768) { // below md
       return {
+        start: "top 90%",
         headlineScale: .32,
         badgeY: 80,
       };
     } 
     else if (width < 1024) { // below lg
       return {
+        start: "top 90%",
         headlineScale: .32,
         badgeY: 160,
       };
     } 
     else if (width < 1280) { // below xl
       return {
+        start: "top 90%",
         headlineScale: .28,
         badgeY: 160,
       };
     }
     else if (width < 1536) { // below 2xl
       return {
+        start: "top 90%",
         headlineScale: .26,
         badgeY: 160,
       };
@@ -54,7 +59,7 @@ gsap.registerPlugin(ScrollTrigger);
     gsap.timeline({
       scrollTrigger: {
         trigger: image,
-        start: "top 90%", // Starts when headline's top edge hits 80% of viewport
+        start: values.start, // Starts when headline's top edge hits 90% of viewport
         end: "top 40%",    // Ends when headline's top edge hits 40% of viewport
         scrub: true,
         invalidateOnRefresh: true,
