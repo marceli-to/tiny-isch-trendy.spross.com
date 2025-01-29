@@ -17,7 +17,7 @@
 <div class="md:col-span-1 flex">
   <div class="flex items-center gap-x-4 lg:gap-x-8">
     {{ partial:icons/state }}
-    {{ state:label }}
+    {{ state:label | replace(' ', '&nbsp;') }}
   </div>
 </div>
 
@@ -36,7 +36,7 @@
     href="" 
     title="Dowload Anmeldeformular"
     class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
-    <span>Formular</span>
+    <span>Anmeldeformular</span>
     {{ partial:icons/pdf }}
   </a>
 </div>

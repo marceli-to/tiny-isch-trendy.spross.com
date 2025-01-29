@@ -52,13 +52,13 @@ export default {
 
       fontSize: {
         'tiny': 'clamp(0.65rem, 1vw, .8rem)', // sup
-        'xs': 'clamp(1rem, 1vw, 1.25rem)', // faq, hero caption
+        'xs': 'clamp(1rem, 1.2vw, 1.5rem)', // faq, hero caption
         'sm': 'clamp(0.938rem, 1.15vw, 1.813rem)', // apartment list
         'md': 'clamp(1.063rem, 1.31vw, 2.375rem)', // body (sm)
         'lg': 'clamp(1.313rem, 2.69vw, 4rem)', // body (lg), 
         'xl': 'clamp(1.313rem, 3.69vw, 5rem)', // heading 2, apartment buttons
         '2xl': 'clamp(2.25rem, 6.75vw, 9rem)', // heading 1
-        '3xl': 'clamp(6rem, 22vw, 25rem)', // hero
+        '3xl': 'clamp(6rem, 24vw, 26rem)', // hero
       },
 
       margin: {

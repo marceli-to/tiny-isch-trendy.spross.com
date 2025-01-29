@@ -8,7 +8,7 @@
 [x-cloak] { display: none !important; }
 
 ::selection {
-
+  @apply bg-thyme/20
 }
 
 body {
@@ -53,7 +53,8 @@ main em {
 }
 
 main sup {
-  @apply text-tiny
+  font-size: 60%;
+  top: -0.6em
 }
 
 main a {
