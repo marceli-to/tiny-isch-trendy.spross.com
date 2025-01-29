@@ -23,7 +23,7 @@
 
 <div class="md:col-span-1">
   <a
-    href="/assets/downloads/spross-saatlenstrasse-haus-{{ building }}-{{ type }}-{{ title }}.pdf" 
+    href="/assets/downloads/spross-saatlenstrasse-haus-{{ building }}-{{ type }}-{{ title | lowercase }}.pdf" 
     target="_blank"
     title="Download Grundriss" 
     class="font-thesans-bold flex items-center gap-x-6 lg:gap-x-12 !no-underline transition-colors {{ building == 'a' ? 'hover:text-cedar' : 'hover:text-leaf' }}">
