@@ -6,14 +6,14 @@
   <div class="flex justify-between items-end gap-x-10 w-full px-20">
     <button 
       @click="active_mini = 'building_a'" 
-      class="font-ppeiko-medium w-full h-50 text-lg leading-none text-cedar flex justify-center items-end rounded-t-lg bg-cedar/15 pb-10" 
-      :class="{ 'text-xl bg-cedar/20 !h-70 !pb-20': active_mini === 'building_a' }">
+      class="font-ppeiko-medium w-full h-50 text-[1.3rem] leading-none text-cedar flex justify-center items-end rounded-t-lg bg-cedar/15 pb-10" 
+      :class="{ 'text-[1.75rem] bg-cedar/20 !h-70 !pb-20': active_mini === 'building_a' }">
       Haus A
     </button>
     <button 
       @click="active_mini = 'building_b'" 
-      class="font-ppeiko-medium w-full h-50 text-lg leading-none text-thyme flex justify-center items-end rounded-t-lg bg-thyme/15 pb-10" 
-      :class="{ 'text-xl bg-thyme/20 !h-70 !pb-20': active_mini === 'building_b' }">
+      class="font-ppeiko-medium w-full h-50 text-[1.3rem] leading-none text-thyme flex justify-center items-end rounded-t-lg bg-thyme/15 pb-10" 
+      :class="{ 'text-[1.75rem] bg-thyme/20 !h-70 !pb-20': active_mini === 'building_b' }">
       Haus B
     </button>
   </div>
@@ -57,17 +57,17 @@
 <section 
   class="text-sm hidden md:col-span-full md:grid md:grid-cols-subgrid mt-md mb-lg" 
   x-data="{ active: 'building_a' }">
-  <div class="md:col-span-full md:grid md:grid-cols-subgrid">
+  <div class="md:col-span-full md:grid md:grid-cols-subgrid items-end">
     <button 
       @click="active = 'building_a'" 
-      class="font-ppeiko-medium text-lg text-cedar md:col-span-2 md:col-start-2 flex justify-center items-end rounded-t-lg py-10 2xl:py-15 bg-cedar/15" 
-      :class="{ 'text-xl bg-cedar/20': active === 'building_a' }">
+      class="font-ppeiko-medium text-lg text-cedar md:col-span-2 md:col-start-2 flex justify-center items-end rounded-t-lg min-h-70 py-10 bg-cedar/15" 
+      :class="{ 'text-xl bg-cedar/20 min-h-90': active === 'building_a' }">
       Haus A
     </button>
     <button 
       @click="active = 'building_b'" 
-      class="font-ppeiko-medium text-lg text-thyme md:col-span-2 flex justify-center items-end rounded-t-lg bg-thyme/15 py-10 2xl:py-15" 
-      :class="{ 'text-xl bg-thyme/20': active === 'building_b' }">
+      class="font-ppeiko-medium text-lg text-thyme md:col-span-2 flex justify-center items-end rounded-t-lg min-h-70 py-10 bg-thyme/15" 
+      :class="{ 'text-xl bg-thyme/20 min-h-90': active === 'building_b' }">
       Haus B
     </button>
   </div>
