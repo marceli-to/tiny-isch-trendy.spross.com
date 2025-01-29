@@ -18,6 +18,10 @@ main {
   @apply flex-1;
 }
 
+main p {
+  @apply text-pretty;
+}
+
 main p:not(:last-child),
 main ul:not(:last-child) {
   @apply mb-sm;

@@ -1,6 +1,17 @@
-{{ partial:layout/section }}
-  <h1 class="text-center mb-md">Die Lage</h1>
-  <h2>Schön ruhig und doch mittendrin</h2>
-  <p>Die Tiny Apartments liegen in einer <em>angenehmen Wohngegend</em> im Zürcher Kreis 12.</p>
-  <div>[image]</div>
+{{ partial:layout/section class="md:grid md:grid-cols-subgrid" }}
+  <div class="md:col-span-full">
+    <h1 class="text-center mb-md">Die Lage</h1>
+    <h2>Schön ruhig und doch mittendrin</h2>
+    <p>Die Tiny Apartments liegen in einer <em>angenehmen Wohngegend</em> im Zürcher Kreis 12.</p>
+  </div>
+  <div class="mt-md ml-60 md:ml-0 md:col-span-full md:grid md:grid-cols-subgrid text-md">
+    <div class="md:col-span-5 md:col-start-4">
+      <div class="mb-md">
+        Bus- und Tramhaltestellen sind zu Fuss in zwei Minuten erreichbar und auch Einkaufsmöglichkeiten finden sich gleich um die Ecke im Quartier. Am HB Zürich sind Sie mit dem Tram Nummer 7 in knapp 20 Minuten. Auch Sportliche werden sich hier wohlfühlen: Der Wald ist ebenso nah wie das Freibad Auhof und der Vitaparcours Zürich Schwamendingen.
+      </div>
+      <a href="/assets/spross-tiny-apartments-luftaufnahme.jpg" data-fancybox="gallery">
+        {{ partial:media/picture image="spross-tiny-apartments-luftaufnahme.jpg" width="1280" height="853" }}
+      </a>
+    </div>
+  </div>
 {{ /partial:layout/section }}
