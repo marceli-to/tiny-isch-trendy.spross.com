@@ -42,7 +42,7 @@ gsap.registerPlugin(ScrollTrigger);
     }
     else { // after 2xl
       return {
-        headlineScale: .2,
+        headlineScale: .24,
         badgeY: 160,
       };
     }

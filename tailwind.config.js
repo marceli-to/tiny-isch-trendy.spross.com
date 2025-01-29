@@ -59,8 +59,6 @@ export default {
         'xl': 'clamp(1.313rem, 3.69vw, 5rem)', // heading 2, apartment buttons
         '2xl': 'clamp(2.25rem, 6.75vw, 9rem)', // heading 1
         '3xl': 'clamp(6rem, 22vw, 25rem)', // hero
-        // '3xl': 'clamp(6rem, 32vw, 36rem)', // hero
-
       },
 
       margin: {
