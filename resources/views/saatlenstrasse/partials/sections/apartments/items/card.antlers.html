@@ -35,8 +35,8 @@
       x-bind:style="selected == {{ index }} ? 'max-height: ' + $refs.container{{ index }}.scrollHeight + 'px;' : ''">
 
       <div class="text-[1rem] mt-5 mb-20">
-        <strong>Geschoss:</strong> 3. Stock<br>
-        <strong>Bruttomiete:</strong> CHF 1800.–
+        <strong>Geschoss:</strong> {{ floor:label }}<br>
+        <strong>Bruttomiete:</strong>CHF {{ rent_gross }}.–
       </div>
       
       <div class="text-[1.32rem] flex justify-between mb-20">
