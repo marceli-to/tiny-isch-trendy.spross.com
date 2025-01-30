@@ -45,7 +45,7 @@ main h3 {}
 
 main b,
 main strong {
-  @apply font-thesans-bold font-normal;
+  @apply font-thesans-bold;
 }
 
 main em {
